@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <!-- Base Shield Hexagon -->
+  <polygon points="32,4 56,14 56,38 32,58 8,38 8,14" fill="url(#bgGrad)" stroke="url(#cyanGrad)" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Inner Circuit Accent Lines -->
+  <path d="M32 10 L32 20 M20 25 L32 25 L44 25 M32 30 L32 50" stroke="#0ea5e9" stroke-width="1.2" stroke-opacity="0.4" stroke-linecap="round"/>
+  <!-- Status Dot (Security Green) -->
+  <circle cx="48" cy="18" r="2.5" fill="url(#greenGrad)"/>
+  <!-- BL Monogram -->
+  <text x="32" y="38" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="19" fill="#f8fafc" letter-spacing="-0.5">BL</text>
+</svg>
