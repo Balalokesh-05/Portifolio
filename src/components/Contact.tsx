@@ -9,25 +9,41 @@ export const Contact: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
-    setSubmitted(true);
-    try {
-      confetti({
-        particleCount: 80,
-        spread: 60,
-        origin: { y: 0.6 },
-      });
-    } catch {
-      // Confetti fallback
-    }
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        'form-name': 'contact',
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      }).toString(),
+    })
+      .then(() => {
+        setSubmitted(true);
+        try {
+          confetti({
+            particleCount: 80,
+            spread: 60,
+            origin: { y: 0.6 },
+          });
+        } catch {
+          // Confetti fallback
+        }
 
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 5000);
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({ name: '', email: '', subject: '', message: '' });
+        }, 5000);
+      })
+      .catch((error) => {
+        console.error('Netlify form submission error:', error);
+      });
   };
 
   const handleCopyEmail = () => {
@@ -158,7 +174,14 @@ export const Contact: React.FC = () => {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  onSubmit={handleSubmit}
+                  className="space-y-4"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <label className="text-[11px] font-mono uppercase tracking-wider text-slate-300 font-semibold">
@@ -166,6 +189,7 @@ export const Contact: React.FC = () => {
                       </label>
                       <input
                         type="text"
+                        name="name"
                         required
                         placeholder="Your Name"
                         value={formData.name}
@@ -180,6 +204,7 @@ export const Contact: React.FC = () => {
                       </label>
                       <input
                         type="email"
+                        name="email"
                         required
                         placeholder="your.email@example.com"
                         value={formData.email}
@@ -195,6 +220,7 @@ export const Contact: React.FC = () => {
                     </label>
                     <input
                       type="text"
+                      name="subject"
                       placeholder="Opportunity / Technical Inquiry"
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
@@ -207,6 +233,7 @@ export const Contact: React.FC = () => {
                       Your Message *
                     </label>
                     <textarea
+                      name="message"
                       required
                       rows={4}
                       placeholder="Share details regarding your opportunity or inquiry..."

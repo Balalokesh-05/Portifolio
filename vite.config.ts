@@ -11,6 +11,11 @@ export default defineConfig({
       name: 'serve-pdf-headers',
       configureServer(server) {
         server.middlewares.use((req, res, next) => {
+          if (req.method === 'POST' && (req.url === '/' || req.url?.startsWith('/?'))) {
+            res.statusCode = 200;
+            res.end('OK');
+            return;
+          }
           if (req.url && (req.url.includes('.pdf') || req.url.includes('Resume'))) {
             res.setHeader('Content-Type', 'application/pdf');
             if (req.url.includes('download')) {

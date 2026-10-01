@@ -41,6 +41,13 @@
     />
   </head>
   <body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950 min-h-screen font-sans">
+    <!-- Netlify Forms detection for static post-processing in React / Vite SPA -->
+    <form name="contact" data-netlify="true" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
