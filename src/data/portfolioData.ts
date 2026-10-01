@@ -17,8 +17,8 @@ export const CONFIG = {
   RESUME_FILENAME: "Bala-Lokesh-Lutukurthi-Resume.pdf",
 
   // Contact details (placeholders until configured)
-  EMAIL: "", // e.g. "balalokesh.dev@example.com"
-  LINKEDIN_URL: "", // e.g. "https://linkedin.com/in/balalokesh"
+  EMAIL: "balalokeshlutukurthi2003@gmail.com",
+  LINKEDIN_URL: "https://www.linkedin.com/in/lokesh-lutukurthi",
   GITHUB_URL: "https://github.com/Balalokesh-05",
   GITHUB_USERNAME: "Balalokesh-05",
 
