@@ -8,7 +8,6 @@ export const GitHub: React.FC = () => {
     <section id="github" className="py-24 relative overflow-hidden bg-slate-950 border-t border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-semibold">
             <GithubIcon className="w-3.5 h-3.5 text-cyan-400" />
@@ -22,7 +21,6 @@ export const GitHub: React.FC = () => {
           </p>
         </div>
 
-        {/* Profile Header Banner */}
         <div className="max-w-4xl mx-auto mb-6 p-6 rounded-2xl glass-panel card-hover-interactive flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="p-3 rounded-xl bg-slate-900 border border-slate-700 text-cyan-400">
@@ -46,7 +44,6 @@ export const GitHub: React.FC = () => {
           </a>
         </div>
 
-        {/* GitHub Codebase Language Distribution Bar */}
         <div className="max-w-4xl mx-auto mb-10 p-5 rounded-2xl glass-panel card-hover-interactive space-y-3.5 text-left">
           <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
             <span className="text-slate-200 font-semibold flex items-center gap-2">
@@ -56,7 +53,6 @@ export const GitHub: React.FC = () => {
             <span className="text-slate-400 text-[11px]">Open Source Projects &amp; Repositories</span>
           </div>
 
-          {/* Segmented Distribution Bar */}
           <div className="h-2.5 w-full rounded-full bg-slate-900 overflow-hidden flex border border-slate-800">
             <div style={{ width: '48%' }} className="bg-sky-400 h-full" title="Python 48%" />
             <div style={{ width: '28%' }} className="bg-amber-400 h-full" title="JavaScript & TypeScript 28%" />
@@ -65,7 +61,6 @@ export const GitHub: React.FC = () => {
             <div style={{ width: '4%' }} className="bg-rose-400 h-full" title="Shell & Bash 4%" />
           </div>
 
-          {/* Legend Items */}
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-mono text-slate-300 pt-1">
             <div className="flex items-center gap-1.5">
               <span className="w-2.5 h-2.5 rounded-full bg-sky-400" />
@@ -90,7 +85,6 @@ export const GitHub: React.FC = () => {
           </div>
         </div>
 
-        {/* Repositories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {FEATURED_REPOSITORIES.map((repo) => (
             <div
@@ -112,7 +106,6 @@ export const GitHub: React.FC = () => {
                   {repo.description}
                 </p>
 
-                {/* Tech Pills */}
                 <div className="flex flex-wrap gap-1.5 pt-1">
                   {repo.technologies.map((tech) => (
                     <span
@@ -125,7 +118,6 @@ export const GitHub: React.FC = () => {
                 </div>
               </div>
 
-              {/* Action Button */}
               <div className="pt-5 mt-5 border-t border-slate-800/80 flex items-center justify-between">
                 <a
                   href={repo.repoUrl}

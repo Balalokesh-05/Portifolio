@@ -11,8 +11,6 @@ export const Navbar: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-
-      // Calculate scroll progress percentage
       const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
       if (totalScroll > 0) {
         setScrollProgress((window.scrollY / totalScroll) * 100);
@@ -66,7 +64,6 @@ export const Navbar: React.FC = () => {
 
   return (
     <>
-      {/* Real-Time Reading Progress Bar */}
       <div
         className="fixed top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-cyan-500 via-sky-400 to-indigo-500 z-[60] pointer-events-none transition-all duration-150"
         style={{ width: `${scrollProgress}%` }}
@@ -84,8 +81,6 @@ export const Navbar: React.FC = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          
-          {/* Brand Logo */}
           <a href="#home" className="flex items-center gap-3 group focus:outline-none">
             <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-700/80 flex items-center justify-center font-mono font-bold text-sm tracking-wider text-cyan-400 group-hover:border-cyan-500/60 group-hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all">
               <span className="flex items-center">
@@ -99,12 +94,11 @@ export const Navbar: React.FC = () => {
               </span>
               <span className="text-[11px] font-mono text-slate-400 flex items-center gap-1.5">
                 <Code2 className="w-3 h-3 text-cyan-400" />
-                <span>Software &amp; Technology</span>
+                <span>Software Developer | Cybersecurity</span>
               </span>
             </div>
           </a>
 
-          {/* Desktop Nav Links with Active Spy Indicator */}
           <nav className="hidden lg:flex items-center gap-1 bg-slate-900/70 p-1.5 rounded-full border border-slate-800/80 backdrop-blur-md" aria-label="Main Navigation">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
@@ -124,7 +118,6 @@ export const Navbar: React.FC = () => {
             })}
           </nav>
 
-          {/* Right CTA: Resume (Opens in another tab) */}
           <div className="hidden sm:flex items-center gap-3">
             <a
               href="/Bala-Lokesh-Lutukurthi-Resume.pdf"
@@ -139,7 +132,6 @@ export const Navbar: React.FC = () => {
             </a>
           </div>
 
-          {/* Mobile Hamburger Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden p-2 text-slate-400 hover:text-cyan-300 rounded-lg hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/40 transition-all duration-200 focus:outline-none"
@@ -150,7 +142,6 @@ export const Navbar: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Drawer Menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden bg-slate-950/95 border-b border-slate-800/90 px-5 pt-3 pb-6 mt-3 space-y-3 backdrop-blur-xl animate-in slide-in-from-top-2 duration-200">
             <div className="flex flex-col space-y-1">

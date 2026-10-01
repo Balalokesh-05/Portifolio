@@ -19,8 +19,6 @@ export const About: React.FC = () => {
   return (
     <section id="about" className="py-24 relative overflow-hidden bg-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-semibold">
             <UserCheck className="w-3.5 h-3.5 text-cyan-400" />
@@ -32,10 +30,7 @@ export const About: React.FC = () => {
           <div className="w-12 h-1 bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-500 rounded-full mt-1" />
         </div>
 
-        {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          {/* Left Column: Broad Professional Narrative */}
           <div className="lg:col-span-6 space-y-5 text-left">
             {ABOUT_DATA.paragraphs.map((p, idx) => (
               <p key={idx} className="text-slate-300 text-sm sm:text-base leading-relaxed">
@@ -68,7 +63,6 @@ export const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Focus Pillars Cards */}
           <div className="lg:col-span-6 space-y-4">
             {ABOUT_DATA.focusPillars.map((pillar) => (
               <div

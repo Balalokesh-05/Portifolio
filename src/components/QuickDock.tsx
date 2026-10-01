@@ -33,7 +33,6 @@ export const QuickDock: React.FC = () => {
       aria-label="Quick Actions Dock"
       className="fixed bottom-6 right-6 z-40 hidden sm:flex items-center gap-2 p-1.5 rounded-full bg-slate-950/85 border border-slate-800/90 backdrop-blur-xl shadow-2xl shadow-black/70 animate-in fade-in slide-in-from-bottom-3 duration-200"
     >
-      {/* Quick Email Action */}
       <button
         onClick={handleCopyEmail}
         className="chip-hover-interactive flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300 hover:text-white"
@@ -52,7 +51,6 @@ export const QuickDock: React.FC = () => {
         )}
       </button>
 
-      {/* Quick Jump to Projects */}
       <a
         href="#projects"
         className="chip-hover-interactive flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300 hover:text-white"
@@ -62,7 +60,6 @@ export const QuickDock: React.FC = () => {
         <span>Projects</span>
       </a>
 
-      {/* Quick Scroll to Top */}
       <button
         onClick={scrollToTop}
         className="btn-hover-interactive p-2 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-300"

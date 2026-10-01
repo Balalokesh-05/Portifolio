@@ -66,8 +66,6 @@ export const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-24 relative overflow-hidden bg-slate-950/80 border-t border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-semibold">
             <MessageSquare className="w-3.5 h-3.5 text-cyan-400" />
@@ -82,14 +80,11 @@ export const Contact: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start max-w-5xl mx-auto">
-          
-          {/* Left Column: Contact Cards */}
           <div className="lg:col-span-5 space-y-4 text-left">
             <h3 className="text-sm font-mono uppercase tracking-wider text-slate-400 font-semibold mb-2">
               Communication Channels
             </h3>
 
-            {/* Email Card */}
             <div className="glass-panel p-5 rounded-2xl card-hover-interactive flex items-center justify-between gap-4 group">
               <div className="flex items-center gap-3.5 min-w-0">
                 <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-emerald-400 shrink-0 transition-transform duration-200 group-hover:scale-105">
@@ -114,7 +109,6 @@ export const Contact: React.FC = () => {
               )}
             </div>
 
-            {/* LinkedIn Card */}
             <a
               href={CONFIG.LINKEDIN_URL || '#'}
               target={CONFIG.LINKEDIN_URL ? "_blank" : undefined}
@@ -137,7 +131,6 @@ export const Contact: React.FC = () => {
               <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition-colors" />
             </a>
 
-            {/* GitHub Card */}
             <a
               href={CONFIG.GITHUB_URL}
               target="_blank"
@@ -160,7 +153,6 @@ export const Contact: React.FC = () => {
             </a>
           </div>
 
-          {/* Right Column: Direct Inquiry Form */}
           <div className="lg:col-span-7">
             <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 text-left">
               {submitted ? (

@@ -6,8 +6,6 @@ export const Certifications: React.FC = () => {
   return (
     <section id="certifications" className="py-24 relative overflow-hidden bg-slate-950 border-t border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-semibold">
             <Award className="w-3.5 h-3.5 text-emerald-400" />
@@ -21,7 +19,6 @@ export const Certifications: React.FC = () => {
           </p>
         </div>
 
-        {/* Certifications Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {CERTIFICATIONS.map((cert) => (
             <div
@@ -48,7 +45,6 @@ export const Certifications: React.FC = () => {
                 </div>
               </div>
 
-              {/* Status / Link Footer */}
               <div className="pt-5 mt-5 border-t border-slate-800/80 flex items-center justify-between text-xs font-mono">
                 <span className="inline-flex items-center gap-1.5 text-emerald-400 font-semibold">
                   <CheckCircle2 className="w-3.5 h-3.5" />

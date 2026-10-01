@@ -6,8 +6,6 @@ export const ResumeCTA: React.FC = () => {
     <section className="py-16 relative overflow-hidden bg-slate-950 border-t border-slate-800/80">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-3xl glass-panel p-8 sm:p-12 card-hover-interactive overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 text-left group">
-          
-          {/* Subtle Ambient Radial Glow */}
           <div
             className="absolute -top-12 -right-12 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-10"
             aria-hidden="true"

@@ -1,28 +1,13 @@
-/**
- * Centralized Portfolio Configuration & Data
- * For Bala Lokesh Lutukurthi
- *
- * Broad Early-Career Technology Professional:
- * Software Development | Cybersecurity | AI/ML | Systems | Data
- *
- * All URLs, personal details, project metadata, and external links are maintained here.
- */
-
-// ==========================================
-// CONFIGURABLE URLS & CONTACT PLACEHOLDERS
-// ==========================================
 export const CONFIG = {
-  // Resume download link & filename
   RESUME_URL: "/Bala_Lokesh_Lutukurthi_Resume.pdf",
   RESUME_FILENAME: "Bala-Lokesh-Lutukurthi-Resume.pdf",
 
-  // Contact details (placeholders until configured)
   EMAIL: "balalokeshlutukurthi2003@gmail.com",
   LINKEDIN_URL: "https://www.linkedin.com/in/lokesh-lutukurthi",
   GITHUB_URL: "https://github.com/Balalokesh-05",
   GITHUB_USERNAME: "Balalokesh-05",
 
-  // Specific Project Repositories
+
   PHISHING_PROJECT_GITHUB_URL: "https://github.com/Balalokesh-05/Hybrid-Phishing-Detection-System",
   SIEM_PROJECT_GITHUB_URL: "https://github.com/Balalokesh-05/SIEM-Log-Collector-Tool",
 
@@ -32,9 +17,6 @@ export const CONFIG = {
   CERT_NPTEL_URL: "",
 };
 
-// ==========================================
-// PERSONAL & HERO PROFILE
-// ==========================================
 export interface PersonalProfile {
   name: string;
   initials: string;
@@ -48,14 +30,14 @@ export interface PersonalProfile {
 export const PERSONAL_PROFILE: PersonalProfile = {
   name: "Bala Lokesh Lutukurthi",
   initials: "BL",
-  primaryTitle: "Software & Technology",
+  primaryTitle: "Software Developer | Cybersecurity",
   secondaryPositioning: "MCA Graduate | Software Development | Cybersecurity | AI/ML",
   supportingLine1: "MCA graduate building practical solutions across software development, cybersecurity, AI/ML, and IT.",
   supportingLine2: "I enjoy learning technologies, solving practical problems, and building projects that combine software, data, security, and intelligent systems.",
   statusBadge: "Open to Full-Time Opportunities",
 };
 
-// Developer code snippet displayed in the hero terminal/code window
+
 export const DEVELOPER_CODE_SNIPPET = `const developer = {
   name: "Bala Lokesh Lutukurthi",
   education: "MCA Graduate",
@@ -69,9 +51,7 @@ export const DEVELOPER_CODE_SNIPPET = `const developer = {
   availableFor: "Full-Time Opportunities"
 };`;
 
-// ==========================================
-// QUICK PROFILE STATS (Strictly verified)
-// ==========================================
+
 export interface QuickStat {
   label: string;
   subtext: string;
@@ -101,9 +81,7 @@ export const QUICK_STATS: QuickStat[] = [
   },
 ];
 
-// ==========================================
-// ABOUT DATA
-// ==========================================
+
 export const ABOUT_DATA = {
   heading: "About Me",
   paragraphs: [
@@ -130,9 +108,7 @@ export const ABOUT_DATA = {
   ],
 };
 
-// ==========================================
-// TECHNICAL SKILLS (Balanced categories)
-// ==========================================
+
 export interface SkillCategory {
   id: string;
   name: string;
@@ -214,9 +190,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
 ];
 
-// ==========================================
-// FEATURED PROJECTS
-// ==========================================
+
 export interface ArchitectureStep {
   step: number;
   label: string;
@@ -388,9 +362,7 @@ export const EXPERIENCE_ITEMS: ExperienceItem[] = [
   },
 ];
 
-// ==========================================
-// CERTIFICATIONS
-// ==========================================
+
 export interface CertificationItem {
   id: string;
   title: string;
@@ -416,16 +388,14 @@ export const CERTIFICATIONS: CertificationItem[] = [
   },
   {
     id: "nptel-cert",
-    title: "NPTEL Certificate",
+    title: "NPTEL – The Joy of Computing using Python",
     issuer: "NPTEL",
-    description: "Structured academic certification validating technical competence through evaluated technical coursework.",
+    description: "12-week programming course covering Python fundamentals, computational thinking, problem-solving, and programming concepts.",
     credentialUrl: CONFIG.CERT_NPTEL_URL,
   },
 ];
 
-// ==========================================
-// EDUCATION
-// ==========================================
+
 export interface EducationItem {
   degree: string;
   cgpa: string;
@@ -448,9 +418,6 @@ export const EDUCATION_ITEMS: EducationItem[] = [
   },
 ];
 
-// ==========================================
-// GITHUB / OPEN SOURCE
-// ==========================================
 export interface RepoCardItem {
   name: string;
   description: string;
@@ -473,9 +440,7 @@ export const FEATURED_REPOSITORIES: RepoCardItem[] = [
   },
 ];
 
-// ==========================================
-// CURRENTLY LEARNING & EXPLORING
-// ==========================================
+
 export const CURRENTLY_LEARNING = [
   { topic: "Software Development", note: "Modern frontend architectures, API design, and clean code patterns" },
   { topic: "Cybersecurity", note: "Threat modeling, defensive security practices, and incident response fundamentals" },

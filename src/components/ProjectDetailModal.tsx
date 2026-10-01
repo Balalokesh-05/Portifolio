@@ -46,7 +46,6 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
         className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-slate-900 border border-slate-700/80 rounded-3xl shadow-2xl p-6 sm:p-8 space-y-7 my-auto text-left"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Top Bar with Category & Close */}
         <div className="flex items-center justify-between border-b border-slate-800 pb-4">
           <div className="flex items-center gap-2.5">
             <span className="px-3 py-1 rounded-full bg-slate-950 border border-cyan-500/40 text-cyan-400 font-mono text-xs font-semibold">
@@ -68,7 +67,6 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
           </button>
         </div>
 
-        {/* Title & Tagline */}
         <div className="space-y-2">
           <h2 id="modal-project-title" className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">
             {project.title}
@@ -78,7 +76,6 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
           </p>
         </div>
 
-        {/* Problem & Solution Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="card-hover-interactive p-5 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-2">
             <div className="flex items-center gap-2 text-rose-400 font-mono text-xs font-bold uppercase tracking-wider">
@@ -101,7 +98,6 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
           </div>
         </div>
 
-        {/* Clean Architecture Diagram */}
         <div className="space-y-3">
           <div className="flex items-center gap-2 text-white font-mono text-xs font-bold uppercase tracking-wider">
             <Layers className="w-4 h-4 text-cyan-400" />
@@ -135,7 +131,6 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
           </div>
         </div>
 
-        {/* Key Features */}
         <div className="space-y-3">
           <div className="flex items-center gap-2 text-white font-mono text-xs font-bold uppercase tracking-wider">
             <Cpu className="w-4 h-4 text-cyan-400" />
@@ -155,7 +150,6 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
           </div>
         </div>
 
-        {/* Project Evaluation Metrics (if applicable) */}
         {project.evaluationMetrics && (
           <div className="space-y-3">
             <div className="flex items-center justify-between">
@@ -192,7 +186,6 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
           </div>
         )}
 
-        {/* Tech Stack Badges */}
         <div className="space-y-2.5">
           <span className="text-xs font-mono uppercase tracking-wider text-slate-400 font-semibold block">
             Technology Stack
@@ -209,7 +202,6 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
           </div>
         </div>
 
-        {/* Challenges & Future Work */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
           <div className="card-hover-interactive p-4 rounded-xl bg-slate-950/50 border border-slate-800 space-y-1">
             <span className="text-xs font-mono font-bold text-slate-300 flex items-center gap-1.5">
@@ -232,7 +224,6 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
           </div>
         </div>
 
-        {/* Footer Actions */}
         <div className="pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
           <a
             href={project.githubUrl}

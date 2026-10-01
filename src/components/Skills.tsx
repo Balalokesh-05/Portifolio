@@ -38,8 +38,6 @@ export const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-24 relative overflow-hidden bg-slate-950/70 border-t border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-14 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-semibold">
             <Layers className="w-3.5 h-3.5 text-cyan-400" />
@@ -53,7 +51,6 @@ export const Skills: React.FC = () => {
           </p>
         </div>
 
-        {/* Category Filter Pills */}
         <div className="flex flex-wrap justify-center gap-2 mb-12" role="tablist" aria-label="Skill categories">
           <button
             onClick={() => setSelectedCategory('all')}
@@ -82,7 +79,6 @@ export const Skills: React.FC = () => {
           ))}
         </div>
 
-        {/* Skills Cards Grid (Technology Badges, No fake percentages) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {displayedCategories.map((category) => (
             <div
@@ -108,7 +104,6 @@ export const Skills: React.FC = () => {
                   {category.description}
                 </p>
 
-                {/* Skill Badges */}
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
                     <span

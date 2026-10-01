@@ -6,8 +6,6 @@ export const CurrentlyLearning: React.FC = () => {
   return (
     <section className="py-20 relative overflow-hidden bg-slate-950/70 border-t border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-14 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-semibold">
             <Compass className="w-3.5 h-3.5 text-cyan-400" />
@@ -21,7 +19,6 @@ export const CurrentlyLearning: React.FC = () => {
           </p>
         </div>
 
-        {/* Learning Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-6xl mx-auto">
           {CURRENTLY_LEARNING.map((item) => (
             <div

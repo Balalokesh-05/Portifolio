@@ -20,8 +20,6 @@ export const Footer: React.FC = () => {
   return (
     <footer className="py-12 bg-slate-950 border-t border-slate-800 text-slate-400 font-mono text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-        
-        {/* Left: Brand Identity */}
         <div className="space-y-1">
           <div className="flex items-center justify-center md:justify-start gap-2">
             <Code2 className="w-4 h-4 text-cyan-400" />
@@ -34,7 +32,6 @@ export const Footer: React.FC = () => {
           </p>
         </div>
 
-        {/* Center: Social Links */}
         <div className="flex flex-wrap items-center justify-center gap-3 text-slate-400">
           <a
             href={CONFIG.GITHUB_URL}
@@ -69,7 +66,6 @@ export const Footer: React.FC = () => {
           </a>
         </div>
 
-        {/* Right: Copyright & Back to Top */}
         <div className="flex items-center gap-4">
           <span className="text-slate-400">
             © {CURRENT_YEAR} {PERSONAL_PROFILE.name}

@@ -19,8 +19,6 @@ export const Experience: React.FC = () => {
   return (
     <section id="experience" className="py-24 relative overflow-hidden bg-slate-950/70 border-t border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-semibold">
             <Briefcase className="w-3.5 h-3.5 text-cyan-400" />
@@ -34,7 +32,6 @@ export const Experience: React.FC = () => {
           </p>
         </div>
 
-        {/* Experience Timeline Cards */}
         <div className="max-w-4xl mx-auto space-y-6">
           {EXPERIENCE_ITEMS.map((item) => (
             <div
@@ -61,7 +58,6 @@ export const Experience: React.FC = () => {
                 </span>
               </div>
 
-              {/* Responsibilities / Practical Contributions */}
               <ul className="space-y-2.5 pt-4">
                 {item.details.map((detail, idx) => (
                   <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">

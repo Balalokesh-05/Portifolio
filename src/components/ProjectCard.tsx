@@ -14,8 +14,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenDetails
 
   return (
     <div className="glass-panel rounded-3xl card-hover-interactive overflow-hidden flex flex-col justify-between group shadow-xl shadow-black/40">
-      
-      {/* Sleek Technical Visual Header Banner */}
       <div className="relative h-16 w-full bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border-b border-slate-800/80 px-6 flex items-center justify-between overflow-hidden tech-grid-bg">
         <div
           className={`absolute -right-6 -top-6 w-28 h-28 rounded-full blur-2xl opacity-20 pointer-events-none ${
@@ -23,7 +21,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenDetails
           }`}
         />
 
-        {/* Left: Window Dots & Identifier */}
         <div className="flex items-center gap-2 z-10">
           <div className="flex gap-1.5">
             <span className="w-2 h-2 rounded-full bg-slate-700 inline-block" />
@@ -35,7 +32,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenDetails
           </span>
         </div>
 
-        {/* Right: Technical Telemetry Tag */}
         <div className="flex items-center gap-2 z-10">
           <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-950/80 border border-slate-800 text-[10px] font-mono text-cyan-300">
             <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
@@ -43,11 +39,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenDetails
           </span>
         </div>
 
-        {/* Accent Bottom Line */}
         <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
       </div>
 
-      {/* Card Header & Badges */}
       <div className="p-6 sm:p-8 space-y-5">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-cyan-500/30 text-cyan-300 font-mono text-xs font-semibold">
@@ -63,7 +57,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenDetails
           )}
         </div>
 
-        {/* Project Title & Description */}
         <div className="space-y-3 text-left">
           <h3
             onClick={() => onOpenDetails(project)}
@@ -77,7 +70,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenDetails
           </p>
         </div>
 
-        {/* Key Features Quick Peek */}
         <div className="space-y-2 text-left pt-2">
           <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 font-semibold block">
             Core Architecture Highlights:
@@ -92,7 +84,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenDetails
           </ul>
         </div>
 
-        {/* Tech Stack Badges */}
         <div className="pt-2 text-left">
           <div className="flex flex-wrap gap-1.5">
             {project.technologies.slice(0, 6).map((tech) => (
@@ -112,7 +103,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenDetails
         </div>
       </div>
 
-      {/* Card Action Footer */}
       <div className="px-6 sm:px-8 py-4 bg-slate-950/70 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3">
         <button
           onClick={() => onOpenDetails(project)}
